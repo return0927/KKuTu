@@ -4,6 +4,8 @@
 	* [샌드박스 :: SDBX](http://cafe.naver.com/sdbx)
 	* [SWMaestro](http://www.swmaestro.kr)
 	* You to have interested in this repository :)
+- [KKuTu Wiki](https://github.com/JJoriping/KKuTu/wiki)
+- [프리 서버 목록](http://jjo.kr/kkutu)
 - Languages
 	* [English](#english)
 	* [한국어](#한국어)
@@ -35,7 +37,7 @@ This repository provides you what you have to prepare to play **KKuTu**.
 1. Install *node.js* and *npm* via a package manager.
 1. Install *PostgreSQL* database server via a package manager.
 1. Put the SQL file(`./db.sql`) into your database.
-	1. Run a command like: `sudo su -u postgres psql --quiet main < ./db.sql`
+	1. Run a command like: `sudo -u postgres psql --quiet main < ./db.sql`
 1. Run the shell script file(`./server-setup.bat`). (It is a bat file for Windows but it will also work on Linux.)
 1. Run these on working directory `./Server`:
 	1. (Web server) `node lib/Web/cluster.js 1`
@@ -48,6 +50,12 @@ This repository provides you what you have to prepare to play **KKuTu**.
 - Once the server is successfully installed, you can do just the last step of above-mentioned guideline whenever you want to run the server.
 - You can open a browser and go to `127.0.0.1`(or external IP address for other people) to play **KKuTu**.
 - Ranking and some session features require [Redis](https://redis.io/) server. This is optional.
+- If you use Cloudflare, you should set status of DNS Tab to 'DNS only'. 'DNS and HTTP proxy (CDN)' status is the reason of unable to open and enter the room.
+
+#### License
+- [GNU General Public License](https://github.com/JJoriping/KKuTu/blob/master/LICENSE) for all source codes in this repository.
+- [Creative Commons License CC BY](https://creativecommons.org/licenses/by/4.0/) for all images and sounds in this repository.
+	- But if you use these for operating KKuTu service provided by this repository, you may omit the attribution(BY).
 
 ## 한국어
 > 글자로 놀자! 끄투 온라인
@@ -76,7 +84,7 @@ This repository provides you what you have to prepare to play **KKuTu**.
 1. 패키지 매니저를 이용하여 *node.js*와 *npm*을 설치합니다.
 1. 패키지 매니저를 이용하여 *PostgreSQL*과 *psql*을 설치합니다.
 1. SQL 파일(`./db.sql`)을 데이터베이스에 입력시킵니다.
-	1. 명령어를 다음 예와 같이 입력할 수 있습니다: `sudo su -u postgres psql --quite main < ./db.sql`
+	1. 명령어를 다음 예와 같이 입력할 수 있습니다: `sudo -u postgres psql --quite main < ./db.sql`
 1. 섈 스크립트 파일(`./server-setup.bat`)을 실행시킵니다. (Windows 전용 파일이지만 Linux에서도 작동합니다.)
 1. 경로 `./Server`에서 다음 명령어들을 실행합니다:
 	1. (웹 서버) `node lib/Web/cluster.js 1`
@@ -89,5 +97,11 @@ This repository provides you what you have to prepare to play **KKuTu**.
 - 서버가 정상적으로 설치된 다음부터는 서버를 실행시키기 위해서 가장 마지막 단계만 수행하면 됩니다.
 - 서버가 성공적으로 열린 후 웹 브라우저에서 `127.0.0.1`(다른 사람들은 해당 컴퓨터의 외부 IP 주소)로 접속하여 끄투를 즐길 수 있습니다.
 - 랭킹 및 세션 기능 일부는 [Redis](https://redis.io/) 서버가 실행되어야만 작동합니다. 일단 이를 설치하지 않아도 서버가 작동할 수 있도록 조치했습니다.
+- 클라우드 플레어를 사용하신다면, DNS 탭의 status를 DNS only로 두세요. DNS and HTTP proxy (CDN)으로 둘 경우, 방 만들기와 방 입장이 되지 않습니다.
+
+#### 라이선스
+- 모든 소스 코드에 대해: [GNU 일반 공중 사용 라이선스](https://github.com/JJoriping/KKuTu/blob/master/LICENSE)
+- 모든 이미지 및 소리에 대해: [크리에이티브 커먼즈 라이선스 CC BY](https://creativecommons.org/licenses/by/4.0/)
+	- 다만 본 레포지토리에서 제공하는 소스 코드로 끄투 서비스를 운영하기 위해 이들을 사용하는 경우 저작자 표시(BY)를 생략할 수 있습니다.
 
 [dev-blog]: http://blog.jjo.kr/220935346136
